@@ -1,0 +1,119 @@
+/* Core Document Reset and Alignment rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.6s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Conditional UI Context Class Modifiers */
+.default-bg { background-image: linear-gradient(135deg, #74ebd5 0%, #9ecefa 100%); }
+.sunny-bg { background-image: url('https://images.unsplash.com/photo-1504386106331-3e4e71712b38?q=80&w=1600'); }
+.rainy-bg { background-image: url('https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?q=80&w=1600'); }
+.cloudy-bg { background-image: url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?q=80&w=1600'); }
+
+/* App Glassmorphism Container Styling */
+.weather-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.15);
+    color: #222;
+}
+
+h2 { 
+    margin-bottom: 20px; 
+    color: #fff; 
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.3); 
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+input {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+button {
+    padding: 14px 22px;
+    border: none;
+    background-color: #2b2b2b;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+button:hover { background-color: #444; }
+
+.secondary-btn {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #111;
+    margin-bottom: 15px;
+}
+.secondary-btn:hover { background-color: rgba(255, 255, 255, 0.6); }
+
+/* Weather Output Display Styling */
+.weather-card {
+    background: rgba(255, 255, 255, 0.65);
+    padding: 25px;
+    border-radius: 14px;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.weather-icon { font-size: 72px; margin: 10px 0; }
+#temperature { font-size: 54px; font-weight: 300; color: #111; }
+#description { text-transform: capitalize; color: #555; margin-bottom: 15px; font-weight: 500; }
+
+.details {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.detail-item { font-size: 16px; color: #333; }
+.detail-item strong { margin-left: 5px; color: #000; }
+
+/* Global Utility Classes */
+.error {
+    color: #d93838;
+    background: rgba(255, 230, 230, 0.9);
+    border: 1px solid rgba(217, 56, 56, 0.3);
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.hidden { display: none !important; }
